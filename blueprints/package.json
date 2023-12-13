@@ -1,0 +1,15 @@
+{
+  "name": "blueprints",
+  "version": "1.0.0",
+  "description": "1. Tailwind CSS\r 2. HTML, CSS, JS",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./build/style.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.3.6"
+  }
+}
