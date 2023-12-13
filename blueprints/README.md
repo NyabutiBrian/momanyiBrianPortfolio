@@ -2,5 +2,4 @@
 
 ### Technologies
 1. Tailwind CSS
-2. React
-3. HTML, CSS, JS
+2. HTML, CSS, JS
