@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hover-text span.hover-img{
+    display: none;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.hover-text:hover span.hover-img{
+    display: block;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/white/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/white/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/white/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicons/white/site.webmanifest">
+
+    <title>Momanyi Brian Portfolio</title>
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a9cdceb046.js" crossorigin="anonymous"></script>
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="min-h-screen bg-darky font-Poppins flex items-center justify-center">
+    <!-- Welcome Section -->
+    <section id="welcome">
+        <div class="flex items-center justify-center">
+            <div class="font-normal text-white flex items-center justify-center">
+                <span class="text-2xl mr-2"><i class="fa-solid fa-location-dot"></i> </span>
+                <h1 class="text-4xl" id="greeting"></h1>
+            </div>
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+    <script>
+        // JavaScript code to redirect to index.html after 6 seconds
+        setTimeout(function () {
+            window.location.href = 'index.html';
+        }, 3000); // 3000 milliseconds = 3 seconds
+    </script>
+</body>
+</html>

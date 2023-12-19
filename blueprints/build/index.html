@@ -1,16 +1,247 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="!scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/white/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicons/white/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicons/white/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicons/white/site.webmanifest">
+    
     <title>Momanyi Brian Portfolio</title>
 
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/a9cdceb046.js" crossorigin="anonymous"></script>
+
+    <!-- Flowbite CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
+<body class="min-h-screen bg-secondary font-Poppins">
+    <!-- NAVIGATION BAR -->
+    <section class="z-50 sticky top-0">
+        <nav class="bg-transparent">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 md:backdrop-blur-md rounded-full">
+                <a href="./index.html" class="p-4 md:p-0 rounded-full md:rounded-none bg-darky md:bg-transparent">
+                    <img src="./assets/images/navLogos/whiteNavLogo.png" class="md:h-8 h-6" alt="Momanyi Logo" />
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-white text-2xl p-4 md:p-0 rounded-full md:rounded-none bg-darky md:bg-transparent" data-collapse-toggle="navbar-default" type="button">
+                    <div id="menu-icon">
+                        <i  class="fa-solid fa-bars"></i>
+                    </div>
+                    <div id="close-icon" class="hidden">
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                </button>
+
+                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                    <ul class="font-medium text-4xl md:text-lg flex flex-col p-12 sm:p-24 md:p-0 mt-4 shadow-lg shadow-darky md:shadow-none rounded-lg bg-darky md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+                        <div class="md:hidden py-12 sm:py-4">
+                            <h6 class="text-secondary text-xs py-2">NAVIGATION</h6>
+                            <hr>
+                        </div>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-darky md:p-0" aria-current="page">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">About</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Work</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Contact</a>
+                        </li>
+                        <li>
+                            <a href="#" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Resume</a>
+                        </li>
+                        <div class="md:hidden py-12 sm:py-4">
+                            <hr>
+                        </div>
+                        <div class="md:hidden">
+                            <h6 class="text-secondary text-xs py-2">SOCIALS</h6>
+                            <ul class="text-white text-sm flex space-x-4">
+                                <li><a href="#">LinkedIn</a></li>
+                                <li><a href="#">GitHub</a></li>
+                                <li><a href="#">TikTok</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!-- HOME SECTION -->
+    <section class="z-40 overflow-x-hidden">
+        <div class="relative flex items-end justify-center">
+            <img src="./assets/images/poet2.png" alt="momanyi dp" class="max-w-xl md:max-w-lg xl:w-2/6">
+        </div>
+        <div class="absolute min-w-full top-0 h-screen flex items-center">
+            <div class="w-full flex items-center justify-between px-2 md:px-20">
+                <div class="text-white font-medium text-xs space-y-1 md:text-2xl px-8 py-4 md:px-0 md:py-0 rounded-full md:rounded-none bg-darky md:bg-transparent">
+                    <p>Freelance</p>
+                    <p>Front End Developer</p>
+                    <p>I.T Support Specialist</p>
+                </div>
+                <div class="flex items-center space-x-4 p-4 rounded-full bg-darky text-white font-medium text-xs md:text-base">
+                    <p>Nairobi, Kenya</p>
+                    <div class="text-md md:text-4xl bg-secondary p-2 md:p-4 rounded-full">
+                        <i class="fa-solid fa-globe fa-beat-fade"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MARQUEE CONTAINER -->
+        <div class="relative max-w-7xl bottom-60 text-white text-9xl sm:text-9xl whitespace-nowrap flex flex-row marqueeContainer" id="">
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+            <div class="block mr-9" id="marqueePart">
+                <p><i class="fa-solid fa-minus"></i> Momanyi Brian</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- WAVE SVG -->
+    <div class="relative w-full -mt-40 md:-mt-52">
+        <img src="./assets/images/wave-haikei-up.svg" alt="svg background up">
+
+        <!-- ABOUT SECTION -->
+        <section class="bg-whity py-16">
+            <div class="max-w-screen-xl mx-auto md:grid md:grid-cols-3 text-justify">
+                <div class="col-span-2 p-4">
+                    <p class="text-lg md:text-3xl text-justify">
+                        Empowering brands to shine in the digital realm. 
+                        Let's redefine the norm and stay at the forefront. 
+                        No fluff, just leading the way in innovation
+                    </p>
+                </div>
+                <div class="col-span-1 p-4 flex md:flex-col md:items-center justify-center space-y-28 md:space-y-10">
+                    <div class="">
+                        <p>
+                            The combination of my passion for design, code & interaction 
+                            positions me in a unique place in the web design world
+                        </p>
+                    </div>
+                    <div class="text-white flex items-center justify-center">
+                        <p class="bg-darky p-14 rounded-full whitespace-nowrap">About Me</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK SECTION -->
+        <section class="bg-whity border border-primary py-16">
+            <div class="max-w-screen-xl mx-auto">
+                <div class="text-darky">
+                    <h6 class="py-2 px-4 text-center md:text-start">RECENT WORK</h6>
+                    <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto">
+                </div>
+
+                <a href="https://msavvy-blog-site-react-django.vercel.app/" target="MSavvy" class="hover-text">
+                    <div class="py-12 px-4 grid md:grid-cols-2">
+                        <div class="md:hidden px-4 py-12 bg-darky">
+                            <img src="./assets/images/works/msavvy.png" alt="msavvy blogite">
+                        </div>
+                        <div class="py-7 md:py-0">
+                            <h5 class="text-2xl lg:text-5xl md:font-semibold">MSavvy Web Blog Site</h5>
+                        </div>
+                        <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                            <p>React, Bootstrap 5, Django, Python, PostgreSQL</p>
+                            <p>2023</p>
+                        </div>
+                        <span class="absolute hover-img px-4 py-12 bg-darky w-1/4">
+                            <img src="./assets/images/works/msavvy.png" alt="msavvy blogite" class="">
+                        </span>
+                    </div>
+                    <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto">
+                </a>
+
+                <a href="https://utawala-servicesgms.000webhostapp.com/index.php" target="usgms" class="hover-text">
+                    <div class="py-12 px-4 grid md:grid-cols-2">
+                        <div class="md:hidden px-4 py-12 bg-secondary">
+                            <img src="./assets/images/works/usgms.png" alt="utawala sgms">
+                        </div>
+                        <div class="py-7 md:py-0">
+                            <h5 class="text-2xl lg:text-5xl md:font-semibold">Utawala SGMS</h5>
+                        </div>
+                        <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                            <p>HTML, JS, Bootstrap 5, PHP, MySQL</p>
+                            <p">2023</p>
+                        </div>
+                        <span class="absolute hover-img px-4 py-12 bg-darky w-1/4">
+                            <img src="./assets/images/works/usgms.png" alt="msavvy blogite" class="">
+                        </span>
+                    </div>
+                    <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto">
+                </a>
+
+                <a href="https://poetic-inspirations.netlify.app/" target="poetic inspirations" class="hover-text">
+                    <div class="py-12 px-4 grid md:grid-cols-2">
+                        <div class="md:hidden px-4 py-12 bg-darky">
+                            <img src="./assets/images/works/poeticInspiration.png" alt="poetic inspirations">
+                        </div>
+                        <div class="py-7 md:py-0">
+                            <h5 class="text-2xl lg:text-5xl md:font-semibold">Poetic Inspiration Website</h5>
+                        </div>
+                        <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                            <p>HTML, JS, Bootstrap 5</p>
+                            <p">2023</p>
+                        </div>
+                        <span class="absolute hover-img px-4 py-12 bg-darky w-1/4">
+                            <img src="./assets/images/works/poeticInspiration.png" alt="msavvy blogite" class="">
+                        </span>
+                    </div>
+                    <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto">
+                </a>
+
+                <a href="https://momanyipoet.github.io/portfolio-6_John_Wick/" target="JohnWick" class="hover-text">
+                    <div class="py-12 px-4 grid md:grid-cols-2">
+                        <div class="md:hidden px-4 py-12 bg-secondary">
+                            <img src="./assets/images/works/johnWick.png" alt="John Wick">
+                        </div>
+                        <div class="py-7 md:py-0">
+                            <h5 class="text-2xl lg:text-5xl md:font-semibold">John Wick</h5>
+                        </div>
+                        <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                            <p>HTML, CSS, JS</p>
+                            <p">2023</p>
+                        </div>
+                        <span class="absolute hover-img px-4 py-12 bg-darky w-1/4">
+                            <img src="./assets/images/works/johnWick.png" alt="msavvy blogite" class="">
+                        </span>
+                    </div>
+                    <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto">
+                </a>
+
+            </div>
+        </section>
+
+        <img src="./assets/images/wave-haikei-down.svg" alt="svg background down">
+    </div>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <!-- FLowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <!-- Custom JS -->
+    <script src="./script.js"></script>
 </body>
 </html>
