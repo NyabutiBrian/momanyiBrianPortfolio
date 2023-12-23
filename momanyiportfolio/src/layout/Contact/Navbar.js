@@ -65,16 +65,16 @@ function Navbar() {
                             <hr/>
                         </div>
                         <li>
-                            <a href="#home" class="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-darky md:p-0" aria-current="page">Home</a>
+                            <Link to="/home" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">Home</Link>
                         </li>
                         <li>
-                            <Link to="/about" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">About</Link>
+                            <Link to="/about" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">About</Link>
                         </li>
                         <li>
-                            <a href="#work" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Work</a>
+                            <a href="/home#work" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-primary md:p-0">Work</a>
                         </li>
                         <li>
-                            <Link to="/contact" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Contact</Link>
+                            <Link to="/contact" class="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-primary md:p-0" aria-current="page">Contact</Link>
                         </li>
                         <div className="md:hidden py-12 sm:py-4">
                             <hr/>

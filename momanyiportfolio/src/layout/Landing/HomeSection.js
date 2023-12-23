@@ -1,10 +1,50 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import momanyidp from '../../assets/images/poet2.png';
+import { gsap } from 'gsap';
 
 function HomeSection() {
 
+    const marqueeRef = useRef(null);
+
+    useEffect(() => {
+        let currentScroll = 0;
+        let isScrollingDown = true;
+
+        const marqueeElements = marqueeRef.current.querySelectorAll('.marqueePart');
+
+        const tween = gsap.to(marqueeElements, {
+        x: '-300%',
+        duration: 20,
+        repeat: -1,
+        ease: 'linear',
+        });
+
+        gsap.set(marqueeElements, { xPercent: -50 });
+
+        const handleScroll = () => {
+        if (window.pageYOffset > currentScroll) {
+            isScrollingDown = true;
+        } else {
+            isScrollingDown = false;
+        }
+
+        gsap.to(tween, {
+            timeScale: isScrollingDown ? 1 : -1,
+        });
+
+        currentScroll = window.pageYOffset;
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup event listener on component unmount
+        return () => {
+        window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
   return (
-    <section className="z-40 overflow-hidden bg-secondary">
+    <section className="z-40 overflow-hidden bg-secondary scroll-m-16" id='home'>
         <div>
             <div className="up-effect relative flex items-end justify-center">
                 <img src={momanyidp} alt="momanyi dp" className="max-w-xl md:max-w-lg xl:w-2/6" />
@@ -26,7 +66,7 @@ function HomeSection() {
             </div>
     
             {/* MARQUE EFFECT */}
-            <div className="up-effect relative max-w-7xl bottom-60 text-white text-9xl sm:text-9xl whitespace-nowrap flex flex-row marqueeContainer">
+            <div className="up-effect relative max-w-7xl bottom-60 text-white text-9xl sm:text-9xl whitespace-nowrap flex flex-row marqueeContainer" ref={marqueeRef}>
                 <div className="block mr-9 marqueePart">
                     <p><i className="fa-solid fa-minus"></i> Momanyi Brian</p>
                 </div>

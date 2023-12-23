@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import whiteLogoFull from '../assets/images/navLogos/whiteLogoFull.png';
+import { Link } from 'react-router-dom';
 
 function Footer() {
-    // When the user scrolls down 600px from the top of the document, show the footer
+    // When the user scrolls down 800px from the top of the document, show the footer
     const [showFooter, setShowFooter] = useState(false);
 
     useEffect(() => {
         function handleScroll() {
-        if (window.scrollY > 600) {
+        if (window.scrollY > 800) {
             setShowFooter(true);
         } else {
             setShowFooter(false);
@@ -34,7 +35,7 @@ function Footer() {
             </div>
             <div className="relative my-14">
                 <div className="magneticButton absolute -top-12 md:-top-20 right-20 md:right-40 z-30 text-white flex items-center justify-center">
-                    <a href="./contact.html" className="bg-primary p-8 md:p-14 rounded-full whitespace-nowrap">Get in touch</a>
+                    <Link to="/contact" className="bg-primary p-8 md:p-14 rounded-full whitespace-nowrap">Get in touch</Link>
                 </div>
                 <hr className="bg-secondary h-0.5 w-full absolute top-1/2 transform -translate-y-1/2"/>
             </div>
@@ -57,9 +58,9 @@ function Footer() {
                 <div className="">
                     <h6 className="text-secondary text-xs md:text-sm py-2">SOCIALS</h6>
                     <ul className="text-white text-sm md:text-md flex space-x-4">
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">TikTok</a></li>
+                        <li><a href="https://github.com/MomanyiPoet" target='LinkedIn'>LinkedIn</a></li>
+                        <li><a href="https://github.com/MomanyiPoet" target='GitHub'>GitHub</a></li>
+                        <li><a href="https://github.com/MomanyiPoet" target='TikTok'>TikTok</a></li>
                     </ul>
                 </div>
             </div>

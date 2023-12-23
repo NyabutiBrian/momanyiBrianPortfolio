@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import navlogo from '../../assets/images/navLogos/whiteNavLogo.png';
 import { Link } from 'react-router-dom';
 import { Collapse } from 'flowbite';
@@ -65,13 +65,13 @@ function Navbar() {
                             <hr/>
                         </div>
                         <li>
-                            <a href="#home" class="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-darky md:p-0" aria-current="page">Home</a>
+                            <Link to="/home" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Home</Link>
                         </li>
                         <li>
-                            <Link to="/about" class="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">About</Link>
+                            <Link to="/about" className="block py-2 px-3 text-white bg-primary rounded md:bg-transparent md:text-darky md:p-0" aria-current="page">About</Link>
                         </li>
                         <li>
-                            <a href="#work" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Work</a>
+                            <a href="/home#work" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Work</a>
                         </li>
                         <li>
                             <Link to="/contact" className="block py-2 px-3 text-white rounded hover:bg-secondary md:hover:bg-transparent md:border-0 md:hover:text-darky md:p-0">Contact</Link>

@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import msavvy from '../../assets/images/works/msavvy.png'
 import usgms from '../../assets/images/works/usgms.png'
 import poeticInspiration from '../../assets/images/works/poeticInspiration.png'
 import johnWick from '../../assets/images/works/johnWick.png'
+import { gsap } from 'gsap';
 
 function WorkSection() {
+    // IMAGE POP UP
+    useEffect(() => {
+        const imageContainers = document.querySelectorAll('.hover-text');
+
+        imageContainers.forEach((imageContainer) => {
+            const popUpImage = imageContainer.querySelector('.hover-img');
+
+            imageContainer.addEventListener('mouseenter', function () {
+                gsap.to(popUpImage, { duration: 0.6, opacity: 1, scale: 1.1, ease: 'power2.out' });
+            });
+
+            imageContainer.addEventListener('mouseleave', function () {
+                gsap.to(popUpImage, { duration: 0.6, opacity: 0, scale: 1, ease: 'power2.out' });
+            });
+        });
+    }, []);
+
   return (
     <section className="bg-whity py-16 scroll-m-8" id="work">
         <div className="max-w-screen-xl mx-auto">

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import darkWaveUp from '../assets/images/dark-wave-haikei-up.svg';
-import darkWaveDown from '../assets/images/dark-wave-haikei-down.svg';
+import darkWaveUp from '../../assets/images/dark-wave-haikei-up.svg';
+import darkWaveDown from '../../assets/images/dark-wave-haikei-down.svg';
 import { gsap } from 'gsap';
 
 function OverlayPage() {
@@ -8,9 +8,9 @@ function OverlayPage() {
   // OVERLAY EFFECT (WELCOME)
   useEffect(() => {
     gsap.to("#overlay-page", {
-      duration: 2,
+      duration: 1,
       top: "-120%",
-      delay: 2,
+      delay: 1,
       ease: "expo.inOut"
     });
   }, []);
@@ -22,7 +22,7 @@ function OverlayPage() {
         </div>
 
         <div className="font-normal text-whity flex items-center justify-center">
-            <h1 className="text-4xl">Home</h1>
+            <h1 className="text-4xl">Welcome Home</h1>
         </div>
         
         <div className="-mb-5 md:-mb-20">
