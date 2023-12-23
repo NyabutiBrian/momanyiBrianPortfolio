@@ -31,7 +31,24 @@ function ContactInput() {
                 
                 <div class="relative my-16 md:my-24">
                     <div class="absolute -top-12 md:-top-20 right-20 md:right-40 z-30 text-white flex items-center justify-center">
-                        <button type="submit" class="magneticButton bg-primary p-8 md:p-14 rounded-full whitespace-nowrap">Send Message</button>
+                        <button type="submit" class="magneticButton bg-primary p-8 md:p-14 rounded-full whitespace-nowrap" data-modal-target="popup-modal" data-modal-toggle="popup-modal">Send Message</button>
+                    </div>
+                    <div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <div class="relative bg-gray-700 rounded-lg shadow-lg">
+                                <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <div class="p-4 md:p-5 text-center">
+                                    <i class="fa-regular fa-circle-check text-primary text-5xl"></i>
+                                    <h3 class="my-5 text-lg font-normal text-white">Message Sent Successfully</h3>
+                                    <a href="/contact" class="text-darky bg-secondary hover:bg-whity focus:ring-4 focus:outline-none focus:ring-darky font-medium rounded-lg text-sm px-5 py-2.5 text-center">OK</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <hr class="bg-secondary h-0.5 w-full absolute top-1/2 transform -translate-y-1/2" />
                 </div>
