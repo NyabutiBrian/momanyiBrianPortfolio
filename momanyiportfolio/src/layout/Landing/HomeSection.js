@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import momanyidp from '../../assets/images/poet2.png';
+import momanyidp from '../../assets/images/poet2.webp';
 import { gsap } from 'gsap';
 
 function HomeSection() {
