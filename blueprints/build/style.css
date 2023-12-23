@@ -1154,6 +1154,10 @@ video {
   transition-duration: 300ms;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hover-text span.hover-img{
   display: none;
   left: 50%;
