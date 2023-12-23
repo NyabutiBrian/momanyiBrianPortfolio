@@ -32,7 +32,7 @@ function Navbar() {
         };
     
         const collapse = new Collapse($targetEl, $triggerEl, options, instanceOptions);
-        collapse.toggle();
+        collapse.collapse();
     
         return () => {
           // Clean up the collapse instance if needed
