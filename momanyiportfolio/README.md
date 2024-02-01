@@ -1,17 +1,40 @@
-## REACT FRAMEWORK
+## MOMANYI BRIAN PORTFOLIO - REACT DEVELOPMENT
 
-    - Ensure you have Node.js installed on your computer. You can download it from the official website.
+## Table of contents
 
-### Creating a React App:
+- [Overview](#overview)
+    - [Introduction](#introduction)
+- [Process + Development](#process-+-development)
+    - [Install Node.js](#install-node.js)
+    - [Creating a React App](#creating-a-react-app)
+- [Author](#author)
 
-    Terminal or command prompt.
-    ```bash
-    npm install -g create-react-app - install npm globally
-    npx create-react-app frontend
-    cd frontend
-    npm install react-router-dom
-    npm i @vercel/analytics
-    npm start
-    ```
+## Overview
 
-    - This command will set up a new React project with all the necessary files and dependencies.
+### Introduction
+- Momanyi Brian is Frontend Developer who has created inspiring projects, all showcased in his portfolio.
+
+## Process + Development
+
+### Install Node.js
+- Ensure you have Node.js installed on your computer. You can download it from the official website.
+
+### Creating a React App
+
+```bash
+# Terminal or command prompt.
+npm install -g create-react-app - install npm globally
+npx create-react-app momanyiportfolio
+cd momanyiportfolio
+npm install react-router-dom
+npm i @vercel/analytics
+npm start
+
+# Incase you downloaded a React project.
+npm install # Installs the dependencies from the package.json
+```
+
+## Author
+
+- Momanyi Brian - [Portfolio Website](https://momanyi-brian-portfolio.vercel.app)
+
