@@ -2,6 +2,8 @@ import React, { useEffect } from 'react'
 import msavvy from '../../assets/images/works/msavvy.png'
 import usgms from '../../assets/images/works/usgms.png'
 import poeticInspiration from '../../assets/images/works/poeticInspiration.png'
+import newYear from '../../assets/images/works/new-year.png'
+import merryXmas from '../../assets/images/works/merry-xmas.png'
 import johnWick from '../../assets/images/works/johnWick.png'
 import { gsap } from 'gsap';
 
@@ -88,23 +90,66 @@ function WorkSection() {
                 <hr className="bg-secondary h-0.5 w-3/4 md:w-full mx-auto"/>
             </a>
 
-            <a href="https://momanyipoet.github.io/portfolio-6_John_Wick/" target="JohnWick" className="hover-text">
-                <div className="py-12 px-4 grid md:grid-cols-2">
-                    <div className="md:hidden px-4 py-12 bg-secondary">
-                        <img src={johnWick} alt="John Wick"/>
+            <div class="text-darky pt-24">
+                <h6 class="py-2 px-4 text-center md:text-start">NOTEWORTHY PROJECTS</h6>
+                <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto" />
+            </div>
+
+            <a href="https://new-year-ruddy.vercel.app/" target="New Year Website" class="hover-text">
+                <div class="py-12 px-4 grid md:grid-cols-2">
+                    <div class="md:hidden px-4 py-12 bg-darky">
+                        <img src={newYear} alt="New Year Screenshot" />
                     </div>
-                    <div className="py-7 md:py-0">
-                        <h5 className="text-2xl lg:text-5xl md:font-semibold">John Wick</h5>
+                    <div class="py-7 md:py-0">
+                        <h5 class="text-2xl lg:text-5xl md:font-semibold">New Year Website</h5>
                     </div>
-                    <div className="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                    <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                        <p>HTML, CSS, Tailwind CSS, JS</p>
+                        <p>2023</p>
+                    </div>
+                    <span class="absolute hover-img px-4 py-12 md:bg-darky w-0 md:w-2/4 lg:w-1/4">
+                        <img src={newYear} alt="msavvy blogite" />
+                    </span>
+                </div>
+                <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto" />
+            </a>
+
+            <a href="https://christmas-theta.vercel.app/" target="Merry Chrismas" class="hover-text">
+                <div class="py-12 px-4 grid md:grid-cols-2">
+                    <div class="md:hidden px-4 py-12 bg-secondary">
+                        <img src={merryXmas} alt="Merry Chrismas Screenshot" />
+                    </div>
+                    <div class="py-7 md:py-0">
+                        <h5 class="text-2xl lg:text-5xl md:font-semibold">Merry Chrismas Website</h5>
+                    </div>
+                    <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
+                        <p>HTML, CSS, Tailwind CSS, JS</p>
+                        <p>2023</p>
+                    </div>
+                    <span class="absolute hover-img px-4 py-12 md:bg-secondary w-0 md:w-2/4 lg:w-1/4">
+                        <img src={merryXmas} alt="Merry Chrismas Screenshot" />
+                    </span>
+                </div>
+                <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto" />
+            </a>
+
+            <a href="https://momanyipoet.github.io/portfolio-6_John_Wick/" target="JohnWick" class="hover-text">
+                <div class="py-12 px-4 grid md:grid-cols-2">
+                    <div class="md:hidden px-4 py-12 bg-primary">
+                        <img src={johnWick} alt="John Wick" />
+                    </div>
+                    <div class="py-7 md:py-0">
+                        <h5 class="text-2xl lg:text-5xl md:font-semibold">John Wick</h5>
+                    </div>
+                    <div class="flex items-center justify-between text-sm sm:text-base lg:text-lg">
                         <p>HTML, CSS, JS</p>
                         <p>2023</p>
                     </div>
-                    <span className="absolute hover-img px-4 py-12 md:bg-secondary w-0 md:w-2/4 lg:w-1/4">
-                        <img src={johnWick} alt="msavvy blogite"/>
+                    <span class="absolute hover-img px-4 py-12 md:bg-primary w-0 md:w-2/4 lg:w-1/4">
+                        <img src={johnWick} alt="msavvy blogite" />
                     </span>
                 </div>
-                <hr className="bg-secondary h-0.5 w-3/4 md:w-full mx-auto"/>
+                <hr class="bg-secondary h-0.5 w-3/4 md:w-full mx-auto" />
             </a>
 
         </div>

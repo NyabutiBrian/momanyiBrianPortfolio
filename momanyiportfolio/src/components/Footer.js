@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
     // When the user scrolls down 800px from the top of the document, show the footer
     const [showFooter, setShowFooter] = useState(false);
+    const [currentTime, setCurrentTime] = useState(new Date());
 
     useEffect(() => {
         function handleScroll() {
@@ -20,6 +21,14 @@ function Footer() {
         return () => {
         window.removeEventListener('scroll', handleScroll);
         };
+    }, []);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentTime(new Date());
+        }, 1000); // Update the time every second
+
+        return () => clearInterval(timer); // Clean up the interval on component unmount
     }, []);
 
   return (
@@ -51,8 +60,8 @@ function Footer() {
                 <div className="">
                     <h6 className="text-secondary text-xs md:text-sm py-2">LOCAL TIME</h6>
                     <div className="text-white text-sm md:text-md flex space-x-4">
-                        <p>17:00 PM</p>
-                        <p>EAT</p>
+                        <p>{currentTime.toLocaleTimeString()}</p> {/* Display dynamic time */}
+                        <p>{currentTime.toDateString()}</p> {/* Display dynamic date */}
                     </div>
                 </div>
                 <div className="">
